@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gas Calculator - Isaiah Wiesner</title>
+  <link rel="icon" href="./favicon.ico">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./main.js" defer type="module"></script>
+</head>
+<body>
+  <div class="container">
+
+    <div class="head">
+      <h1 class="title">
+        Gas Calculator
+      </h1>
+      <h4 class="subtitle">
+        Created by <a href="https://izzdevs.me" target="_blank">Isaiah Wiesner</a>
+      </h4>
+    </div>
+
+    <details open>
+      <summary>Preferences</summary>
+      <div class="form-div">
+        <form id="prefs">
+  
+          <div class="form-group">
+            <label for="prefs-mileage">Gas mileage (L/100km)</label>
+            <input type="number" id="prefs-mileage" name="mileage" step="0.1" placeholder="Gas mileage (L/100km)" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="prefs-price">Gas price (cents/L)</label>
+            <input type="number" id="prefs-price" name="price" step="0.01" placeholder="Gas price (cents/L)" required>
+          </div>
+  
+          <button type="submit" class="btn-primary double">
+            Save
+          </button>
+  
+        </form>
+      </div>
+    </details>
+
+    <details>
+      <summary>Calculate Price from Trip Distance</summary>
+      <div class="form-div">
+        <form id="trip">
+  
+          <div class="form-group">
+            <label for="trip-dist">Trip distance (km)</label>
+            <input type="number" id="trip-dist" name="distance" step="0.1" placeholder="Trip distance (km)" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="trip-price">Gas price (cents/L)</label>
+            <input type="number" id="trip-price" name="gasPrice" step="0.01" placeholder="Gas price (cents/L)" required>
+          </div>
+  
+          <button type="submit" class="btn-primary double">
+            Calculate Price
+          </button>
+  
+        </form>
+      </div>
+    </details>
+
+    <details>
+      <summary>Calculate Price from Litres Needed</summary>
+      <div class="form-div">
+        <form id="litres">
+  
+          <div class="form-group">
+            <label for="litres-volume">Litres needed</label>
+            <input type="number" id="litres-volume" name="volume" step="0.1" placeholder="Litres needed" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="litres-price">Gas price (cents/L)</label>
+            <input type="number" id="litres-price" name="gasPrice" step="0.1" placeholder="Gas price (cents/L)" required>
+          </div>
+  
+          <button type="submit" class="btn-primary double">
+            Calculate Price
+          </button>
+  
+        </form>
+      </div>
+    </details>
+
+    <details>
+      <summary>Calculate Litres Given from Price</summary>
+      <div class="form-div">
+        <form id="price">
+
+          <div class="form-group">
+            <label for="price-amount">Amount put in ($)</label>
+            <input type="number" id="price-amount" name="price" step="0.01" placeholder="Amount put in ($)" required>
+          </div>
+
+          <div class="form-group">
+            <label for="price-gasprice">Gas price (cents/L)</label>
+            <input type="number" id="price-gasprice" name="gasPrice" step="0.1" placeholder="Gas price (cents/L)" required>
+          </div>
+
+          <button type="submit" class="btn-primary double">
+            Calculate Litres
+          </button>
+
+        </form>
+      </div>
+    </details>
+
+  </div>
+</body>
+</html>
